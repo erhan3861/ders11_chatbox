@@ -6,7 +6,7 @@ from sqlalchemy import create_engine, Column, String, Integer
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
 from passlib.hash import sha256_crypt
-import mainpage
+import home
 
 
 # SQLite veritabanı oluşturma
@@ -88,7 +88,7 @@ def login():
         for l in liste:
             l.destroy()
         # anasayfayı projeye aktarıyoruz
-        chat.make_widgets(app)
+        home.make_widgets(app)
                 
     else:
         messagebox.showerror("Hata", "Kullanıcı adı veya şifre yanlış!")
